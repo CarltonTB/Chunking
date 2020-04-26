@@ -2,7 +2,7 @@
 import nltk
 from nltk.corpus import conll2000
 import pickle
-
+import sys
 
 # Code adapted from the textbook code
 class ConsecutiveNPChunkTagger(nltk.TaggerI):
@@ -84,22 +84,42 @@ def c_npchunk_features(sentence, i, history):
 
 
 if __name__ == "__main__":
+    if len(sys.argv) > 1:
+        if sys.argv[1] == "-train":
+            train_sents = conll2000.chunked_sents('train.txt', chunk_types=['NP'])
+            a_chunker = ConsecutiveNPChunker(train_sents, a_npchunk_features)
+            b_chunker = ConsecutiveNPChunker(train_sents, b_npchunk_features)
+            c_chunker = ConsecutiveNPChunker(train_sents, c_npchunk_features)
+            a_outfile = open('a_chunker', 'wb')
+            b_outfile = open('b_chunker', 'wb')
+            c_outfile = open('c_chunker', 'wb')
+            pickle.dump(a_chunker, a_outfile)
+            pickle.dump(b_chunker, b_outfile)
+            pickle.dump(c_chunker, c_outfile)
+            a_outfile.close()
+            b_outfile.close()
+            c_outfile.close()
+        else:
+            a_chunker = None
+            b_chunker = None
+            c_chunker = None
+            print("Error: invalid command line argument. Please enter '-train' if you wish to re-run training, "
+                  "otherwise don't provide any command line arguments and the trained models "
+                  "will be loaded from their pickle files. "
+                  "It takes 30+ minutes to train all 3 of the models")
+    else:
+        a_infile = open('a_chunker', 'rb')
+        b_infile = open('b_chunker', 'rb')
+        c_infile = open('c_chunker', 'rb')
+        a_chunker = pickle.load(a_infile)
+        b_chunker = pickle.load(b_infile)
+        c_chunker = pickle.load(c_infile)
     test_sents = conll2000.chunked_sents('test.txt', chunk_types=['NP'])
-    train_sents = conll2000.chunked_sents('train.txt', chunk_types=['NP'])
-    a_chunker = ConsecutiveNPChunker(train_sents, a_npchunk_features)
-    b_chunker = ConsecutiveNPChunker(train_sents, b_npchunk_features)
-    c_chunker = ConsecutiveNPChunker(train_sents, c_npchunk_features)
-    a_outfile = open('a_chunker', 'wb')
-    b_outfile = open('b_chunker', 'wb')
-    c_outfile = open('c_chunker', 'wb')
-    pickle.dump(a_chunker, a_outfile)
-    pickle.dump(b_chunker, b_outfile)
-    pickle.dump(c_chunker, c_outfile)
-    a_outfile.close()
-    b_outfile.close()
-    c_outfile.close()
-    print(a_chunker.evaluate(test_sents))
-    print(b_chunker.evaluate(test_sents))
-    print(c_chunker.evaluate(test_sents))
+    if a_chunker is not None:
+        print(a_chunker.evaluate(test_sents))
+    if b_chunker is not None:
+        print(b_chunker.evaluate(test_sents))
+    if c_chunker is not None:
+        print(c_chunker.evaluate(test_sents))
     # chunker.parse()
 
