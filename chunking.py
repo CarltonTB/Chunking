@@ -3,6 +3,8 @@ import nltk
 from nltk.corpus import conll2000
 import pickle
 import sys
+from nltk.tokenize import word_tokenize, sent_tokenize
+
 
 # Code adapted from the textbook code
 class ConsecutiveNPChunkTagger(nltk.TaggerI):
@@ -46,6 +48,8 @@ def a_npchunk_features(sentence, i, history):
     """
     Feature extractor that only uses the POS of the current token
     """
+    if len(sentence[i]) < 2:
+        print("here")
     word, pos = sentence[i]
     return {"pos": pos}
 
@@ -121,5 +125,33 @@ if __name__ == "__main__":
         print(b_chunker.evaluate(test_sents))
     if c_chunker is not None:
         print(c_chunker.evaluate(test_sents))
-    # chunker.parse()
+    fobj = open("HW3_test.txt", "r")
+    sentences = fobj.readlines()
+    fobj.close()
+    tagged_sentences = []
+    for sentence in sentences:
+        tokens = word_tokenize(sentence)
+        tagged_sentences.append(nltk.pos_tag(tokens))
+    a_result_file = open("a_chunker_results.txt", "w")
+    b_result_file = open("b_chunker_results.txt", "w")
+    c_result_file = open("c_chunker_results.txt", "w")
+    for tagged_sentence in tagged_sentences:
+        print("a_chunker result:")
+        a_result = a_chunker.parse(tagged_sentence)
+        print(a_result)
+        a_result_file.write(str(a_result))
+        a_result_file.write("\n")
+        print("b_chunker result:")
+        b_result = b_chunker.parse(tagged_sentence)
+        print(b_result)
+        b_result_file.write(str(b_result))
+        b_result_file.write("\n")
+        print("c_chunker result:")
+        c_result = c_chunker.parse(tagged_sentence)
+        print(c_result)
+        c_result_file.write(str(c_result))
+        c_result_file.write("\n")
+    a_result_file.close()
+    b_result_file.close()
+    c_result_file.close()
 

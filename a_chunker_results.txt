@@ -1,0 +1,216 @@
+(S
+  (NP Balcor/NNP)
+  ,/,
+  (NP which/WDT)
+  has/VBZ
+  (NP interests/NNS)
+  in/IN
+  (NP real/JJ estate/NN)
+  ,/,
+  said/VBD
+  (NP the/DT position/NN)
+  is/VBZ
+  newly/RB
+  created/VBN
+  ./.)
+(S
+  (NP The/DT move/NN)
+  followed/VBD
+  (NP a/DT round/NN)
+  of/IN
+  (NP similar/JJ increases/NNS)
+  by/IN
+  (NP other/JJ lenders/NNS)
+  against/IN
+  (NP Arizona/NNP real/JJ estate/NN loans/NNS)
+  ,/,
+  reflecting/VBG
+  (NP a/DT)
+  continuing/VBG
+  (NP decline/NN)
+  in/IN
+  (NP that/DT market/NN)
+  ./.)
+(S
+  (NP United/NNP)
+  paid/VBD
+  (NP him/PRP)
+  (NP a/DT)
+  (NP $/$ 375,000/CD bonus/NN)
+  to/TO
+  lure/VB
+  (NP him/PRP)
+  away/RB
+  from/IN
+  (NP American/NNP Airlines/NNPS)
+  ,/,
+  and/CC
+  (NP he/PRP)
+  was/VBD
+  paid/VBN
+  (NP a/DT salary/NN)
+  of/IN
+  (NP $/$ 342,122/CD last/JJ year/NN)
+  with/IN
+  (NP a/DT)
+  (NP $/$ 280,000/CD bonus/NN)
+  ./.)
+(S
+  (NP Public/JJ protests/NNS)
+  against/IN
+  (NP him/PRP)
+  were/VBD
+  triggered/VBN
+  in/IN
+  (NP June/NNP 1987/CD due/JJ)
+  to/TO
+  (NP charges/NNS)
+  by/IN
+  (NP Diaz/NNP Herrera/NNP)
+  ,/,
+  (NP his/PRP$ former/JJ chief/NN)
+  of/IN
+  (NP staff/NN)
+  ,/,
+  that/IN
+  (NP Mr./NNP Noriega/NNP)
+  had/VBD
+  stolen/VBN
+  (NP the/DT 1984/CD election/NN)
+  and/CC
+  had/VBD
+  ordered/VBN
+  (NP the/DT killing/NN)
+  of/IN
+  (NP Messrs./NNP Spadafora/NNP)
+  and/CC
+  (NP Torrijos/NNP)
+  ./.)
+(S
+  (NP They/PRP)
+  are/VBP
+  in/IN
+  (NP the/DT forefront/NN)
+  of/IN
+  opposing/VBG
+  (NP the/DT search/NN)
+  for/IN
+  (NP new/JJ landfills/NNS)
+  and/CC
+  (NP methods/NNS)
+  of/IN
+  (NP incineration/NN)
+  and/CC
+  even/RB
+  oppose/VBP
+  (NP new/JJ methods/NNS)
+  of/IN
+  (NP research/NN such/JJ)
+  as/IN
+  (NP genetic/JJ engineering/NN)
+  ./.)
+(S
+  (NP It/PRP)
+  is/VBZ
+  providing/VBG
+  (NP $/$ 50/CD million/CD)
+  in/IN
+  (NP emergency/NN financing/NN)
+  to/TO
+  (NP the/DT company/NN)
+  and/CC
+  has/VBZ
+  agreed/VBN
+  to/TO
+  buy/VB
+  as/RB
+  (NP much/JJ)
+  as/IN
+  (NP $/$ 75/CD million/CD)
+  in/IN
+  (NP receivables/NNS)
+  from/IN
+  (NP B./NNP Altman/NNP)
+  &/CC
+  (NP Co./NNP)
+  and/CC
+  (NP Bonwit/NNP Teller/NNP)
+  ,/,
+  (NP L.J/NNP)
+  ./.
+  (NP Hooker/NNP)
+  (NP 's/POS two/CD)
+  fully/RB
+  owned/VBN
+  (NP department-store/NN chains/NNS)
+  ./.)
+(S
+  (NP This/DT summer/NN)
+  ,/,
+  (NP the/DT jamboree/NN)
+  attracted/VBD
+  (NP more/JJR visitors/NNS)
+  than/IN
+  (NP the/DT busiest/JJS week/NN)
+  of/IN
+  (NP the/DT town/NN)
+  (NP 's/POS winter/NN ski/NN season/NN)
+  ./.)
+(S
+  (NP His/PRP$ term/NN)
+  has/VBZ
+  produced/VBN
+  (NP no/DT spectacular/JJ failures/NNS)
+  in/IN
+  (NP politics/NNS)
+  ,/,
+  in/IN
+  (NP the/DT economy/NN)
+  or/CC
+  on/IN
+  (NP the/DT military/JJ front/NN)
+  ,/,
+  and/CC
+  has/VBZ
+  chalked/VBN
+  up/RP
+  (NP some/DT successes/NNS)
+  ./.)
+(S
+  (NP The/DT Ginnie/NNP Mae/NNP 9/CD %/NN issue/NN)
+  was/VBD
+  yielding/VBG
+  (NP 9.43/CD %/NN)
+  to/TO
+  (NP a/DT 12-year/JJ average/JJ life/NN assumption/NN)
+  ,/,
+  as/IN
+  (NP the/DT spread/NN)
+  above/IN
+  (NP the/DT Treasury/NNP 10-year/JJ note/NN)
+  held/VBD
+  at/IN
+  (NP 1.42/CD percentage/NN points/NNS)
+  ./.)
+(S
+  By/IN
+  (NP early/JJ May/NNP)
+  ,/,
+  (NP Moscow/NNP)
+  had/VBD
+  delivered/VBN
+  ,/,
+  for/IN
+  (NP example/NN)
+  ,/,
+  (NP 1,000/CD trucks/NNS)
+  ,/,
+  about/IN
+  (NP 100/CD tanks/NNS)
+  ,/,
+  (NP artillery/NN)
+  and/CC
+  (NP hundreds/NNS)
+  of/IN
+  (NP other/JJ combat/NN vehicles/NNS)
+  ./.)
