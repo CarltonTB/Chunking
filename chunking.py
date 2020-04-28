@@ -3,7 +3,7 @@ import nltk
 from nltk.corpus import conll2000
 import pickle
 import sys
-from nltk.tokenize import word_tokenize, sent_tokenize
+from nltk.tokenize import word_tokenize
 
 
 # Code adapted from the textbook code
