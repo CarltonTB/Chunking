@@ -14,7 +14,7 @@ class DateEntityRecognizer:
     def parse_files(self, files):
         count = 0
         for file_name in files:
-            infile = open("wiki/" + file_name)
+            infile = open("wiki_pages/" + file_name)
             lines = infile.readlines()
             outfile = open("results/" + file_name.replace(".txt", "") + "_results.txt", "w")
             for line in lines:
@@ -29,7 +29,7 @@ class DateEntityRecognizer:
 
 
 def get_wiki_files():
-    files = os.listdir(os.path.curdir+"/wiki")
+    files = os.listdir(os.path.curdir+"/wiki_pages")
     for file_name in files:
         if ".txt" not in file_name:
             files.remove(file_name)
