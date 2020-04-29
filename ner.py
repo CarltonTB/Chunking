@@ -14,7 +14,7 @@ if __name__ == "__main__":
     for sentence in tagged_sentences:
         ner_tagged = nltk.ne_chunk(sentence, binary=False)
         ner_tagged_sentences.append(ner_tagged)
-    ner_outfile = open("ner_results.txt", "w")
+    ner_outfile = open("results/ner_results.txt", "w")
     for sentence in ner_tagged_sentences:
         ner_outfile.write(str(sentence))
         ner_outfile.write("\n")

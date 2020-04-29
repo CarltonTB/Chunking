@@ -89,32 +89,35 @@ def c_npchunk_features(sentence, i, history):
 
 if __name__ == "__main__":
     if len(sys.argv) > 1:
-        if sys.argv[1] == "-train":
-            train_sents = conll2000.chunked_sents('train.txt', chunk_types=['NP'])
-            a_chunker = ConsecutiveNPChunker(train_sents, a_npchunk_features)
-            b_chunker = ConsecutiveNPChunker(train_sents, b_npchunk_features)
-            c_chunker = ConsecutiveNPChunker(train_sents, c_npchunk_features)
-            a_outfile = open('a_chunker', 'wb')
-            b_outfile = open('b_chunker', 'wb')
-            c_outfile = open('c_chunker', 'wb')
-            pickle.dump(a_chunker, a_outfile)
-            pickle.dump(b_chunker, b_outfile)
-            pickle.dump(c_chunker, c_outfile)
-            a_outfile.close()
-            b_outfile.close()
-            c_outfile.close()
-        else:
-            a_chunker = None
-            b_chunker = None
-            c_chunker = None
-            print("Error: invalid command line argument. Please enter '-train' if you wish to re-run training, "
-                  "otherwise don't provide any command line arguments and the trained models "
-                  "will be loaded from their pickle files. "
-                  "It takes 30+ minutes to train all 3 of the models")
+        # WARNING: rerunning training takes over 30 minutes and will overwrite the existing trained models
+        print("uncomment the below training code if you want to rerun training")
+        # if sys.argv[1] == "-train":
+        #     train_sents = conll2000.chunked_sents('train.txt', chunk_types=['NP'])
+        #     a_chunker = ConsecutiveNPChunker(train_sents, a_npchunk_features)
+        #     b_chunker = ConsecutiveNPChunker(train_sents, b_npchunk_features)
+        #     c_chunker = ConsecutiveNPChunker(train_sents, c_npchunk_features)
+        #     a_outfile = open('trained_models/a_chunker', 'wb')
+        #     b_outfile = open('trained_models/b_chunker', 'wb')
+        #     c_outfile = open('trained_models/c_chunker', 'wb')
+        #     pickle.dump(a_chunker, a_outfile)
+        #     pickle.dump(b_chunker, b_outfile)
+        #     pickle.dump(c_chunker, c_outfile)
+        #     a_outfile.close()
+        #     b_outfile.close()
+        #     c_outfile.close()
+        # else:
+        #     a_chunker = None
+        #     b_chunker = None
+        #     c_chunker = None
+        #     print("Error: invalid command line argument. Please enter '-train' if you wish to re-run training, "
+        #           "otherwise don't provide any command line arguments and the trained models "
+        #           "will be loaded from their pickle files. "
+        #           "It takes 30+ minutes to train all 3 of the models")
     else:
-        a_infile = open('a_chunker', 'rb')
-        b_infile = open('b_chunker', 'rb')
-        c_infile = open('c_chunker', 'rb')
+        # Load trained models from their files
+        a_infile = open('trained_models/a_chunker', 'rb')
+        b_infile = open('trained_models/b_chunker', 'rb')
+        c_infile = open('trained_models/c_chunker', 'rb')
         a_chunker = pickle.load(a_infile)
         b_chunker = pickle.load(b_infile)
         c_chunker = pickle.load(c_infile)
@@ -132,9 +135,9 @@ if __name__ == "__main__":
     for sentence in sentences:
         tokens = word_tokenize(sentence)
         tagged_sentences.append(nltk.pos_tag(tokens))
-    a_result_file = open("a_chunker_results.txt", "w")
-    b_result_file = open("b_chunker_results.txt", "w")
-    c_result_file = open("c_chunker_results.txt", "w")
+    a_result_file = open("results/a_chunker_results.txt", "w")
+    b_result_file = open("results/b_chunker_results.txt", "w")
+    c_result_file = open("results/c_chunker_results.txt", "w")
     for tagged_sentence in tagged_sentences:
         print("a_chunker result:")
         a_result = a_chunker.parse(tagged_sentence)
