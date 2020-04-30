@@ -33,6 +33,7 @@ HW3_test.txt = the given sentences to run the chunkers on
 chunking.py = script that loads the trained chunking models, runs them on the HW3_test.txt sentences, and writes the results to the chunking results files  
 named_entity_recognition.py = script that runs nltk.ne_chunk on the HW3_test.txt sentences and writes the results to the ner_results.txt file  
 date_entity_recognition.py = script that extracts date entities from the wikipedia source files and writes the results to the appropriate results files  
+HW3_Carlton.pdf = the report containing the answers to the homework questions  
   
   
 **How to run the code**  
