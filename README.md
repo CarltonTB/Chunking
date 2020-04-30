@@ -6,7 +6,7 @@ dependencies:
 nltk  
 
 **Files**  
-Folder: trained_models  
+**Folder: trained_models**  
     a_chunker = pickle file containing the trained model from Q1 part a  
     b_chunker = pickel file containing the trained model from Q1 part b  
     c_chunker = pickle file containing the trained model from Q1 part c  
