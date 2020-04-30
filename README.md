@@ -1,5 +1,6 @@
 # CISC689: Natural Language Processing Homework 3  
 Author: Carlton Brady (solo)  
+Repo: https://github.com/CarltonTB/Chunking  
 Python version: 3.6.3  
 dependencies:  
 nltk  
@@ -10,7 +11,7 @@ Folder: trained_models
     b_chunker = pickel file containing the trained model from Q1 part b  
     c_chunker = pickle file containing the trained model from Q1 part c  
   
-Folder: results  
+**Folder: results**  
     a_chunker_results.txt = results from running chunker from part a on the HW3_test.txt sentences  
     b_chunker_results.txt = results from running chunker from part b on the HW3_test.txt sentences  
     c_chunker_results.txt = results from running chunker from part c on the HW3_test.txt sentences  
@@ -21,7 +22,7 @@ Folder: results
     world_world_i_results.txt = date entities extracted from WWI wiki page  
     ner_results.txt = results from running ntlk.ne_chunk on the HW3_test.txt sentences  
   
-Folder: wiki_pages:  
+**Folder: wiki_pages:**  
     charlie_chaplin.txt = wikipedia source file for charlie chaplin  
     constitution_of_the_united_states.txt = wikipedia source file for US constitution  
     daylight_saving_time.txt = wikipedia source file for daylight saving time  
