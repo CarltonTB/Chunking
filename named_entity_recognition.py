@@ -16,6 +16,7 @@ if __name__ == "__main__":
         ner_tagged_sentences.append(ner_tagged)
     ner_outfile = open("results/ner_results.txt", "w")
     for sentence in ner_tagged_sentences:
+        print(str(sentence))
         ner_outfile.write(str(sentence))
         ner_outfile.write("\n")
     ner_outfile.close()

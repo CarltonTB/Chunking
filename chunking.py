@@ -115,12 +115,14 @@ if __name__ == "__main__":
         #           "It takes 30+ minutes to train all 3 of the models")
     else:
         # Load trained models from their files
+        print("Loading trained chunking models...")
         a_infile = open('trained_models/a_chunker', 'rb')
         b_infile = open('trained_models/b_chunker', 'rb')
         c_infile = open('trained_models/c_chunker', 'rb')
         a_chunker = pickle.load(a_infile)
         b_chunker = pickle.load(b_infile)
         c_chunker = pickle.load(c_infile)
+        print("Models loaded!")
     test_sents = conll2000.chunked_sents('test.txt', chunk_types=['NP'])
     if a_chunker is not None:
         print(a_chunker.evaluate(test_sents))
